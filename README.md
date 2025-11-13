@@ -14,5 +14,9 @@ Para crear carpeta o archivo desde Visual Code, procedemos así :
 
 6. Cuando quedan cambios sin guardar en el Source Control, veremos los archivos pendienet y damos al signo de + para crear un commit y así queden los cambios guradados
 
-5. Hacemos git push para confirmar todo.
+7. Hacemos git push para confirmar todo.
+
+8. Cuando creamos carpeta o archivo en la carpeta local, inmediatamente sube a Visual Code, debemos segir los mismos pasos .
+
+Resumen: Hacemos commit para actualizar los cambios y git push para confirmar todo.
 
