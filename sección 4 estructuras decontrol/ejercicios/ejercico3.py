@@ -1,3 +1,7 @@
+#Pedimos números hasta que se introduzca un número impar.
+
+
+
 numero = 0
 
 print("Introduzca un número")
