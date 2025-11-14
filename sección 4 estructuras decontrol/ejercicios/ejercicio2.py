@@ -1,3 +1,7 @@
+# Aquí identificamos las variables dentro del print. Es más elegante.
+
+
+
 a = int(input())
 b = int(input())
 
