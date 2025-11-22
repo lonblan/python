@@ -27,6 +27,7 @@ while True:
 
     elif opcion == "3":
         print("Programa terminado")
+        
         break
 
 
