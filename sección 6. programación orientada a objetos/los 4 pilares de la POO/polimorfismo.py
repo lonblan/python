@@ -70,7 +70,7 @@ print("--- Misma orden para todas: retirar 1200 ---\n")
 
 for cuenta in cuentas:
     print(cuenta)              # Cada una se presenta.
-    cuenta.retirar(1200)       # Misma llamada. Cada una responde a su manera.
+    cuenta.retirar(1200)      # Misma llamada. Cada una responde a su manera.
     print()
 
 # 3. Polimorfismo: un mismo mensaje (retirar) produce un resultado distinto
