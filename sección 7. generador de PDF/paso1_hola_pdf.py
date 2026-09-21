@@ -9,8 +9,7 @@
 #
 # Librería: fpdf2  (se importa como "fpdf")
 #
-# En esta carpeta ya hay un entorno virtual (.venv) con fpdf2.
-# Para ejecutar este archivo desde la terminal:
+# Cómo ejecutar este archivo:
 #   cd "sección 7. generador de PDF"
 #   .venv/bin/python paso1_hola_pdf.py
 #
