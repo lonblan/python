@@ -1,0 +1,288 @@
+/* Hoja de estilos del generador.
+   Los colores salen del marco azul del certificado (paso 9). */
+
+:root {
+  --tinta: #19376e;
+  --tinta-hover: #244888;
+  --papel: #e9dfd0;
+  --hoja: #fffaf3;
+  --oro: #9a7340;
+  --texto: #1c2430;
+  --suave: #5c6570;
+  --linea: rgba(25, 55, 110, 0.16);
+  --exito: #1e4d36;
+  --exito-fondo: #e7f2eb;
+  --error: #8c2f2f;
+  --error-fondo: #f8ecec;
+  --aviso: #7a5420;
+  --aviso-fondo: #f8f1e4;
+  --sombra: 0 18px 40px rgba(48, 36, 18, 0.14);
+  --fuente-titulo: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  --fuente-texto: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 36px 16px;
+  color: var(--texto);
+  background: var(--papel);
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.marco {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 12px;
+  border: 3px solid var(--tinta);
+  background: var(--papel);
+  box-shadow: var(--sombra);
+}
+
+.hoja {
+  position: relative;
+  padding: 42px 48px 32px;
+  border: 1px solid var(--tinta);
+  background: var(--hoja);
+}
+
+.membrete {
+  margin: 0;
+  color: var(--oro);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 8px 0 0;
+  color: var(--tinta);
+  font-family: var(--fuente-titulo);
+  font-size: 2.35rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.adorno {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 16px;
+}
+
+.adorno::before,
+.adorno::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--oro);
+}
+
+.adorno span {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--oro);
+  transform: rotate(45deg);
+}
+
+.intro {
+  margin: 0 0 26px;
+  max-width: 38rem;
+  color: var(--suave);
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--tinta);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.fila {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.ruta {
+  flex: 1;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.ruta--vacia {
+  color: var(--suave);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--texto);
+  font: inherit;
+}
+
+input[type="text"]:focus,
+button:focus-visible {
+  outline: 2px solid var(--oro);
+  outline-offset: 2px;
+}
+
+.ayuda {
+  margin: 6px 0 0;
+  color: var(--suave);
+  font-size: 0.85rem;
+}
+
+button {
+  border: 1px solid var(--tinta);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--tinta);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(25, 55, 110, 0.06);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.fila button {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+}
+
+.principal {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px 16px;
+  border-color: var(--tinta);
+  background: var(--tinta);
+  color: var(--hoja);
+  font-size: 1.05rem;
+}
+
+.principal:hover {
+  background: var(--tinta-hover);
+  color: #fff;
+}
+
+.resultado {
+  margin-top: 22px;
+  padding: 16px 16px 14px;
+  border: 1px dashed var(--linea);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.resultado p {
+  margin: 0;
+}
+
+.resultado--ok {
+  border-style: solid;
+  border-color: rgba(30, 77, 54, 0.35);
+  background: var(--exito-fondo);
+}
+
+.resultado--ok #mensaje {
+  color: var(--exito);
+  font-weight: 600;
+}
+
+.resultado--error {
+  border-style: solid;
+  border-color: rgba(140, 47, 47, 0.35);
+  background: var(--error-fondo);
+}
+
+.resultado--error #mensaje {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.lista {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.lista:empty {
+  display: none;
+}
+
+.lista li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--linea);
+  font-size: 0.92rem;
+}
+
+.lista li:last-child {
+  border-bottom: 0;
+}
+
+.avisos {
+  margin-top: 12px;
+}
+
+.avisos-titulo {
+  color: var(--aviso);
+  font-weight: 600;
+}
+
+#abrir {
+  margin-top: 14px;
+  padding: 10px 14px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 16px 10px;
+  }
+
+  .marco {
+    padding: 8px;
+  }
+
+  .hoja {
+    padding: 28px 18px 22px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .fila {
+    flex-direction: column;
+  }
+
+  .fila button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generador de certificados</title>
+  <!-- La apariencia vive en la hoja de estilos estilos.css -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="marco">
+    <main class="hoja">
+      <p class="membrete">Certificado de curso</p>
+      <h1>Generador de certificados</h1>
+      <div class="adorno" aria-hidden="true"><span></span></div>
+      <p class="intro">
+        Elige un Excel con las columnas nombre y curso.
+        Se creará un certificado en PDF por cada alumno.
+      </p>
+
+      <form id="formulario">
+        <div class="campo">
+          <label for="excel-ruta">Archivo Excel</label>
+          <div class="fila">
+            <p class="ruta ruta--vacia" id="excel-ruta">Ningún archivo elegido</p>
+            <button type="button" id="elegir-excel">Elegir Excel…</button>
+          </div>
+          <p class="ayuda">La primera fila debe decir: nombre y curso</p>
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha que aparecerá en los certificados</label>
+          <input id="fecha" name="fecha" type="text" autocomplete="off" required>
+        </div>
+
+        <div class="campo">
+          <label for="carpeta-ruta">Carpeta donde se guardan los PDF</label>
+          <div class="fila">
+            <p class="ruta ruta--vacia" id="carpeta-ruta">Se propondrá al elegir el Excel</p>
+            <button type="button" id="elegir-carpeta">Elegir carpeta…</button>
+          </div>
+        </div>
+
+        <button type="submit" class="principal" id="generar">Generar certificados</button>
+      </form>
+
+      <section class="resultado" id="resultado" aria-live="polite">
+        <p id="mensaje">
+          Cuando elijas el Excel y pulses Generar certificados, aquí verás el resultado.
+        </p>
+        <ul class="lista" id="lista"></ul>
+        <div class="avisos" id="avisos" hidden>
+          <p class="avisos-titulo">Avisos</p>
+          <ul class="lista" id="lista-avisos"></ul>
+        </div>
+        <button type="button" class="secundario" id="abrir" hidden>
+          Abrir carpeta de certificados
+        </button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
