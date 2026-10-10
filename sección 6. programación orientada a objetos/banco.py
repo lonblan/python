@@ -6,7 +6,7 @@ class Usuario:
 
     
 class Banco:
-    def __init__(self,usuarios=[]):
+    def __init__(self, usuarios=[]):
         self.usuarios = usuarios
 
     def autenticar(self, nombre, pin):
@@ -52,7 +52,7 @@ while True:
     pin = input()
     if banco.autenticar(nombre, pin):
         while True:
-            print("Por elija una de las siguientes opciones: \n 1. Sacar dinero \n 2. Terminar sesión")
+            print("Por favor elija una de las siguientes opciones: \n 1. Sacar dinero \n 2. Terminar sesión")
             opcion = input()
             if opcion == "1":
                 print("Ingrese la cantidad a sacar: ")
