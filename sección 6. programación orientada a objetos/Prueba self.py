@@ -11,3 +11,4 @@ coche1.motor = "Gasolina"
 coche1.acelerar(a)
 
 print(coche1.color)
+print(coche1.marca)
