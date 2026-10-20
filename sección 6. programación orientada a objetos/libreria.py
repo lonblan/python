@@ -26,7 +26,7 @@ class Libreria:
         print(f"El libro {titulo} no se encuentra en la libreria")
 
 libro1 = Libro("El principito", "Antoine de Saint-Exupéry", 10.00)
-libro2 = Libro("1984", "George Orwell", 15.00)
+libro2 = Libro("1984", "George Orwell", 14.00)
 libro3 = Libro("Cien años de soledad", "Gabriel García Márquez", 20.00)
 
 libreria = Libreria([libro1, libro2, libro3])
