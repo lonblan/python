@@ -15,7 +15,7 @@ class Libreria:
 
     def mostrar_libros(self):
         for libro in self.libros:
-            print(libro.autor)
+            print(libro.titulo)
 
     def vender_libro(self, titulo):
         for index, libro in enumerate(self.libros):

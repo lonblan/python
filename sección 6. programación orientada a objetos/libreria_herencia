@@ -1,0 +1,22 @@
+class Libro:
+    def __init__(self, titulo, autor, precio):
+        self.titulo = titulo
+        self.autor = autor
+        self.precio = precio
+
+    def describir(self):
+        print(f"{self.titulo}, de {self.autor}. Precio: {self.precio}")
+
+
+class LibroDigital(Libro):
+    def __init__(self, titulo, autor, precio, formato):
+        super().__init__(titulo, autor, precio)
+        self.formato = formato
+
+    def descargar(self):
+        print(f"Descargando {self.titulo} en formato {self.formato}")
+
+
+ebook = LibroDigital("1984", "George Orwell", 8.00, "PDF")
+ebook.describir()
+ebook.descargar()
