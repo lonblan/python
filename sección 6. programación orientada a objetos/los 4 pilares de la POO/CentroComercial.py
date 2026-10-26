@@ -16,7 +16,7 @@ class alimento(Producto):
      super().__init__(referencia, nombre, pvp)
      self.tipo = alimento
 
-     def __str__(self):
+    def __str__(self):
         return f"Producto: {self.referencia} , Nombre:: {self.nombre}, Precio:: {self.pvp}, Tipo:: {self.tipo}"
 
 
