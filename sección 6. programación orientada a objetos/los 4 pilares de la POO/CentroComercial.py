@@ -71,8 +71,37 @@ def vender_producto(productos):
             
     print("Producto no encontrado")
 
-listar_productos(alimentos)   
-vender_producto(alimentos)
-listar_productos(alimentos)   
 
 
+
+while True:
+    print("Bienvenido al Centro Comercial, elija una opción")
+    
+    print("1. Listar productos alimentos")
+    print("2. Vender producto alimentos")
+    print("3. Listar productos electrodomesticos")
+    print("4. Vender producto electrodomesticos")
+    print("5. Listar productos moda")
+    print("6. Vender producto moda")
+    print("7. Salir")
+
+    opcion = int(input())
+
+    if opcion == 1:
+        listar_productos(alimentos)
+    elif opcion == 2:
+        vender_producto(alimentos)
+    elif opcion == 3:
+        listar_productos(electrodomesticos)
+    elif opcion == 4:
+        vender_producto(electrodomesticos)
+    elif opcion == 5:
+        listar_productos(modas)
+    elif opcion == 6:
+        vender_producto(modas)
+
+    elif opcion == 7:
+        print("Gracias por su visita")
+        break
+    else:
+        print("Opcion no valida")
